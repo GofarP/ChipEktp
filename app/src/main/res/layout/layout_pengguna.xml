@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvpengguna"
+        android:layout_width="match_parent"
+        android:layout_height="160sp"
+        app:cardCornerRadius="20sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        >
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="120sp"
+           android:orientation="horizontal"
+           android:layout_marginTop="20sp"
+           >
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginTop="10sp"
+               android:layout_gravity="center_vertical"
+               >
+
+               <TextView
+                   android:id="@+id/lblnamapengguna"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/txt_nama_pengguna"
+                   android:textSize="20sp"
+                   android:textColor="@color/black"
+                   android:layout_marginStart="20sp"
+                   android:layout_marginBottom="20sp"
+                   />
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:gravity="end"
+               >
+
+               <Button
+                   android:id="@+id/btnbukapintu"
+                   android:layout_height="wrap_content"
+                   android:layout_width="wrap_content"
+                   android:text="@string/txt_button_buka_pintu"
+                   android:layout_gravity="end"
+                   android:background="@color/blue"
+                   android:layout_marginEnd="20sp"
+                   />
+
+
+               <Button
+                   android:id="@+id/btnhapusdata"
+                   android:layout_height="wrap_content"
+                   android:layout_width="wrap_content"
+                   android:text="@string/txt_button_hapus_data"
+                   android:layout_gravity="end"
+                   android:background="@color/red"
+                   android:layout_marginEnd="20sp"
+                   android:layout_marginTop="30sp"
+                   />
+
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

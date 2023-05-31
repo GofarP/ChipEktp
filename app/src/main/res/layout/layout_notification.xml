@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/ivnotification"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:src="@drawable/card"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="20sp"
+            />
+
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/lbljudulnotifikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Judul Notifikasi"
+            android:layout_marginTop="25sp"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="12sp"
+            />
+
+        <TextView
+            android:id="@+id/lblisinotifikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Isi Notifikasi"
+            android:textSize="15sp"
+            android:layout_marginStart="12sp"
+            android:layout_marginTop="12sp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

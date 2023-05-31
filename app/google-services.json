@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "816793497778",
+    "firebase_url": "https://kuncipintu-60301-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "kuncipintu-60301",
+    "storage_bucket": "kuncipintu-60301.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816793497778:android:f1fb60a9ffe35af1e719ab",
+        "android_client_info": {
+          "package_name": "com.example.chipe_ktp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816793497778-b2ltiola0j6an56d453it8gmfucr8igr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwQNG3X8qszhYZAZ49MTIN3uiQAWQn3XQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "816793497778-b2ltiola0j6an56d453it8gmfucr8igr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_main"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Tambahkan Device ID"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20sp"
+        >
+
+        <EditText
+            android:id="@+id/txtdeviceid"
+            android:layout_width="match_parent"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginTop="20sp"
+            android:inputType="text"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btntambahdeviceid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:text="Tambah"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
