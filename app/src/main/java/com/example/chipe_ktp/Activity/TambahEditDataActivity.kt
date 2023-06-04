@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.chipe_ktp.Model.Notifikasi
+import com.example.chipe_ktp.PreferenceManager.PreferenceManager
 import com.example.chipe_ktp.R
 import com.example.chipe_ktp.databinding.ActivityTambahEditDataBinding
 import com.example.chipe_ktp.databinding.LayoutDeviceIdBinding
@@ -33,6 +34,7 @@ class TambahEditDataActivity : AppCompatActivity(){
     private lateinit var customDialog: AlertDialog
     private lateinit var customDialogBinding: LayoutDeviceIdBinding
     private lateinit var deviceId:String
+    private lateinit var preferenceManager: PreferenceManager
 
 
     private var database= FirebaseDatabase.getInstance().reference
@@ -50,11 +52,23 @@ class TambahEditDataActivity : AppCompatActivity(){
 
         extras=intent?.extras
 
+        preferenceManager=PreferenceManager()
+        preferenceManager.preferenceManager(this@TambahEditDataActivity)
+
         tanggalHariIni=SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault()).format(calendar.time)
 
         if(extras?.getString("data")=="tambah")
         {
-            deviceId=extras?.getString("deviceId").toString()
+            if(extras?.getString("deviceId").isNullOrEmpty())
+            {
+                deviceId=preferenceManager.getString("DEVICE_ID").toString()
+            }
+
+            else
+            {
+                deviceId=extras?.getString("deviceId").toString()
+            }
+            Toast.makeText(this@TambahEditDataActivity,"Device Id:$deviceId", Toast.LENGTH_SHORT).show()
         }
 
         else if(extras?.getString("data")=="edit")
@@ -65,6 +79,7 @@ class TambahEditDataActivity : AppCompatActivity(){
             status="Edit"
             oldId=extras!!.getString("id").toString()
             oldName=extras!!.getString("nama").toString()
+            Toast.makeText(this@TambahEditDataActivity,"Device Id:"+ extras?.getString("deviceId").toString(), Toast.LENGTH_SHORT).show()
             deviceId=extras?.getString("deviceId").toString()
 
         }

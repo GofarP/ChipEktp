@@ -236,11 +236,17 @@ class HomeFragment : Fragment(), PenggunaAdapter.OnClickListener {
                                 .child("status")
                                 .setValue("Tutup")
 
+//                            database.child("fcmtoken")
+//                                .child(txtDeviceId.toString())
+//                                .child("fcmtoken")
+//                                .setValue(sharedPreference.getString("FCM_TOKEN"))
+
                             database.child("fcmtoken")
                                 .child(txtDeviceId.toString())
                                 .child("fcmtoken")
-                                .setValue(sharedPreference.getString("FCM_TOKEN"))
+                                .setValue(preferenceManager.getString("FCM_TOKEN"))
 
+                            preferenceManager.putString("DEVICE_ID",txtDeviceId.toString())
                             customDialog.dismiss()
                             Toast.makeText(requireActivity(), "Sukses Menambah Device ID", Toast.LENGTH_SHORT).show()
 
